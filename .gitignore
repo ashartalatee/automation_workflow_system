@@ -1,0 +1,14 @@
+# Abaikan semua folder pycache (compiler Python)
+**/__pycache__/
+*.pyc
+
+# Abaikan semua file fisis di folder input dan output data
+**/data/input/*
+**/data/output/*
+
+# Pengecualian: Biarkan folder data tetap ke-track struktur foldernya walaupun kosong
+!**/data/input/.gitkeep
+!**/data/output/.gitkeep
+
+# Abaikan file gambar acak atau catatan personal di luar source code jika gak penting
+**/notes/*.png
