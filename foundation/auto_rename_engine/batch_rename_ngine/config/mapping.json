@@ -1,5 +1,5 @@
 {
-  "target_extension": ".png",
-  "new_prefix": "produk_sepatu_",
+  "target_extension": ".jpg",
+  "new_prefix": "sepatu_lari",
   "padding_zeros": 3
 }
