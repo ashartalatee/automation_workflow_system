@@ -1,0 +1,6 @@
+{
+  "input_file": "data/input/marketplace_data.csv",
+  "output_file": "data/output/marketplace_data_clean.csv",
+  "strategy": "combination", 
+  "target_columns": ["product_name", "variant"]
+}
