@@ -1,0 +1,40 @@
+# ============================================================
+# duplicate_remover — config.yaml  [v1.1]
+# ============================================================
+# Edit this file to configure the engine without touching code.
+# Load it via: config/loader.py → load_yaml_config()
+# ============================================================
+
+# ── Simple mode: single-group deduplication ─────────────────
+# Leave subset_columns empty ([]) to compare ALL columns.
+subset_columns: []          # e.g. [email] or [email, name]
+keep: "first"               # first | last | none
+
+# ── Multi-column mode: named detection groups ────────────────
+# Each group is applied sequentially to the dataset.
+# The output of group N becomes the input of group N+1.
+multi_column_groups:
+  - name: "by_email"
+    columns: ["email"]
+    keep: "first"
+
+  - name: "by_name_and_city"
+    columns: ["name", "city"]
+    keep: "first"
+
+# ── I/O settings ─────────────────────────────────────────────
+encoding: "utf-8"
+delimiter: ","
+output_dir: "outputs"
+output_filename: "cleaned_output.csv"
+
+# ── Report settings ──────────────────────────────────────────
+save_report: true
+report_dir: "outputs"
+report_filename: "dedup_report.json"
+
+# ── Logging settings ─────────────────────────────────────────
+log_level: "INFO"           # DEBUG | INFO | WARNING | ERROR
+log_to_file: true
+log_dir: "logs"
+log_filename: "duplicate_remover.log"

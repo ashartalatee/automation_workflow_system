@@ -1,14 +1,171 @@
-# Abaikan semua folder pycache (compiler Python)
-**/__pycache__/
-*.pyc
+# =========================
 
-# Abaikan semua file fisis di folder input dan output data
-**/data/input/*
-**/data/output/*
+# Python
 
-# Pengecualian: Biarkan folder data tetap ke-track struktur foldernya walaupun kosong
-!**/data/input/.gitkeep
-!**/data/output/.gitkeep
+# =========================
 
-# Abaikan file gambar acak atau catatan personal di luar source code jika gak penting
-**/notes/*.png
+**pycache**/
+*.py[cod]
+*$py.class
+
+# =========================
+
+# Virtual Environment
+
+# =========================
+
+venv/
+.venv/
+env/
+
+# =========================
+
+# Environment Variables
+
+# =========================
+
+.env
+.env.*
+*.env
+
+# =========================
+
+# IDE
+
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+
+# Operating System
+
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+
+# Build & Packaging
+
+# =========================
+
+build/
+dist/
+*.egg-info/
+
+# =========================
+
+# Logs
+
+# =========================
+
+logs/
+*.log
+
+# =========================
+
+# Cache
+
+# =========================
+
+.cache/
+tmp/
+temp/
+
+# =========================
+
+# Testing
+
+# =========================
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================
+
+# Jupyter
+
+# =========================
+
+.ipynb_checkpoints/
+
+# =========================
+
+# Notes & Personal Files
+
+# =========================
+
+notes/
+journal/
+brain_dump/
+private_notes/
+
+# =========================
+
+# Outputs
+
+# =========================
+
+outputs/
+exports/
+reports/
+artifacts/
+
+# =========================
+
+# Backups
+
+# =========================
+
+backup/
+backups/
+
+# =========================
+
+# Secrets
+
+# =========================
+
+secrets.json
+credentials.json
+config.private.json
+
+# =========================
+
+# Datasets
+
+# =========================
+
+**/datasets/*.csv
+**/datasets/*.xlsx
+**/datasets/*.json
+**/datasets/*.parquet
+
+# Allow placeholder files
+
+!**/datasets/.gitkeep
+
+# =========================
+
+# Engine Runtime Files
+
+# =========================
+
+**/runtime/
+**/generated/
+**/output/
+
+# =========================
+
+# Local Databases
+
+# =========================
+
+*.db
+*.sqlite
+*.sqlite3
